@@ -1,0 +1,9 @@
+{
+  "IMU_schedule": [
+    {"name": "body", "parent_terminal": "0", "child_terminal": "1"},
+    {"name": "right_femur", "parent_terminal": "0", "child_terminal": "2"},
+    {"name": "left_femur", "parent_terminal": "0", "child_terminal": "4"},
+    {"name": "right_tibia", "parent_terminal": "2", "child_terminal": "3"},
+    {"name": "left_tibia", "parent_terminal": "4", "child_terminal": "5"}
+  ]
+}
