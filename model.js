@@ -14,7 +14,7 @@ function start_animate(){
     
     // if (k > 4) {
         
-        humanWalkingPattern.mesh_fixed_update();
+        humanWalkingPattern.mesh_update();
     //     k = 0;
     // } else {
     //     k += 1;
@@ -27,23 +27,6 @@ function start_animate(){
 
 start_animate();
 
-//     geometry.translate(0, -3, 0);
-//     const body = new THREE.Mesh(geometry, material);
-//
-// // geometry.translate(0,0,0);
-//     const left_hand = new THREE.Mesh(geometry, material);
-// // left_hand.position.set(0,3,0);
-//     left_hand.rotation.x = 0;
-//     left_hand.rotation.z = -1;
-//
-//     const right_hand = new THREE.Mesh(geometry, material);
-// // left_hand.position.set(0,3,0);
-//     right_hand.rotation.x = 0;
-//     right_hand.rotation.z = 1;
-//
-//     scene.add(body);
-//     body.add(left_hand);
-//     body.add(right_hand);
 
 
     
