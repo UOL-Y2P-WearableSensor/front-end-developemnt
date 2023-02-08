@@ -16,8 +16,6 @@ export class DigitalTwin {
         this.#light_init();
         this.#camera_init();
         this.#render_init();
-
- 
     }
 
     #scene_init() {

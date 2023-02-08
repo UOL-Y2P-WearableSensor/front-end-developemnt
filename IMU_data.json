@@ -1,9 +1,616 @@
 {
   "IMU_data": [
-    {"roll": 0, "yaw": 0, "pitch":  0},
-    {"roll": 0, "yaw": 0, "pitch":  0},
-    {"roll": 0, "yaw": 0, "pitch":  0},
-    {"roll": 0, "yaw": 0, "pitch":  0},
-    {"roll": 0, "yaw": 0, "pitch":  0}
+    {
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+      },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    }
+,{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    }
+,{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    }
+,{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    }
+,{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    }
+,{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    }
+,{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    }
+,{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    },{
+      "body": [0, 0, 0],
+      "right_femur": [0, 0, 0],
+      "left_femur": [0, 0, 0],
+      "right_tibia": [0, 0, 0],
+      "left_tibia": [0, 0, 0]
+    }
+
+
+
+
   ]
 }
