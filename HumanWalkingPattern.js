@@ -8,7 +8,7 @@ export class HumanWalkingPattern extends DigitalTwin {
         this.#scene_graph_init();
         this.#load_axesHelpers();
         this.IMU_data = IMU_data;
-        this.max_data_quantity = IMU_data.length;
+
     }
 
     /**
@@ -146,36 +146,36 @@ export class HumanWalkingPattern extends DigitalTwin {
         this.mesh_joints[4].rotation.z = -this.angle;
     }
 
-    time_idx = 0;
+    _time_idx = 0;
+    set time_idx(value) {
+        this._time_idx = value;
+    }
+
     scale = 0.5;
 
     mesh_update() {
-        if (this.time_idx >= this.max_data_quantity) this.time_idx = 0;
+        this.#mesh_origin_point_update();       //mesh_origin
 
-        this.#mesh_origin_point_update();  //using the integral of acceleration
-
-        this.#mesh_body_update();
-        this.#mesh_right_femur_update();
-        this.#mesh_left_femur_update();
-        this.#mesh_right_tibia_update();
-        this.#mesh_left_tibia_update();
-        this.time_idx++;
+        this.#mesh_body_update();               //mesh_joints[0]
+        this.#mesh_right_femur_update();        //mesh_joints[1]
+        this.#mesh_left_femur_update();         //mesh_joints[2]
+        this.#mesh_right_tibia_update();        //mesh_joints[3]
+        this.#mesh_left_tibia_update();         //mesh_joints[4]
 
     }
-
+    #mesh_origin_point_update() {
+        // this.mesh_origin.rotation.y = Math.sin(this.time_idx / 10) / 5;
+    }
     #mesh_body_update() {
         // this.mesh_joints[0].rotation.y = Math.sin(this.time_idx/10);
     }
 
     #mesh_right_femur_update() {
-        // this.mesh_joints[1].rotation.y = Math.sin(this.time_idx/10);
-        this.mesh_joints[1].rotation.y = Math.sin(this.time_idx/10);
-        console.log(this.IMU_schedule[1]["child_terminal"]-1);
+        // this.mesh_joints[1].rotation.y = this.IMU_data[R_F];
     }
 
     #mesh_left_femur_update() {
-        // this.mesh_joints[2].rotation.y = Math.sin(this.time_idx/10);
-
+        this.mesh_joints[2].rotation.y = this.IMU_data["L_F"][this.time_idx]["p"];
     }
 
     #mesh_right_tibia_update() {
@@ -188,10 +188,10 @@ export class HumanWalkingPattern extends DigitalTwin {
 
     }
 
-    #mesh_origin_point_update() {
-        // this.mesh_origin.rotation.y = Math.sin(this.time_idx / 10) / 5;
-    }
 
+    get time_idx() {
+        return this._time_idx;
+    }
 
     IMU_data_update(new_data) {
         this.IMU_data = new_data;
