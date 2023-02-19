@@ -2,8 +2,14 @@ import {HumanWalkingPattern} from './HumanWalkingPattern.js';
 
 //read json './IMU_schedule.json'&'./IMU_data.json' synchronously via keywords "await"
 let response = await fetch('./IMU_schedule.json');
-const json = await response.json();
+const IMU_schedule_json = await response.json();
+console.log(IMU_schedule_json["IMU_schedule"]);
 response = await fetch('./IMU_data.json');
+
+let IMU_data_json = await response.json();
+console.log(IMU_data_json);
+
+
 
 //create web worker for rest async works
 let worker;
@@ -14,9 +20,11 @@ if (typeof (Worker) !== "undefined") {
 }
 
 //create DigitalTwin via the json
-let humanWalkingPattern = new HumanWalkingPattern(json["IMU_schedule"]);
+let humanWalkingPattern = new HumanWalkingPattern(
+    IMU_schedule_json["IMU_schedule"],
+    IMU_data_json);
 let k = 0;
-
+const frame_num = 60;
 console.log("start_animate():");
 
 //run the animation
@@ -24,16 +32,19 @@ async function start_animate() {
 
     requestAnimationFrame(start_animate);
 
+    //send request at beginning
     if (k === 0) {
-        worker.postMessage("load");
+        // humanWalkingPattern.IMU_data_update(IMU_data_json);
+        // worker.postMessage("load");
     }
 
-    if (k >= 100) {
-        k = 0;
-    } else {
-        k += 0.1;
-        console.log("\trendering frame");
+    //main updating
+    if (k <= frame_num) {
+        k += 1;
         humanWalkingPattern.mesh_update();
+    } else {
+        console.log("\trendering", frame_num, "frame over");
+        k = 0;
     }
 
     humanWalkingPattern.renderer.render(humanWalkingPattern.scene,
@@ -44,6 +55,7 @@ start_animate().then(() => null);
 
 
 worker.onmessage = function (event) {
-    console.log(event.data);
+    IMU_data_json = event.data;
+    // console.log(event.data);
 }
     
