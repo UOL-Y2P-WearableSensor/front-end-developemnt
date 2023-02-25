@@ -7,7 +7,7 @@ export class HumanWalkingPattern extends DigitalTwin {
         this.#meshes_init();
         this.#scene_graph_init();
         this.#load_axesHelpers();
-        this.IMU_data = IMU_data;
+        this.IMU_data_update(IMU_data);
 
     }
 
@@ -133,17 +133,18 @@ export class HumanWalkingPattern extends DigitalTwin {
         }
 
         this.mesh_init();
-    }
+}
 
 
-    angle = 0.24;
+angle = 0.24;
 
     mesh_init() {
         this.mesh_joints[0].rotation.z = 0;
         this.mesh_joints[1].rotation.z = Math.PI - this.angle;
         this.mesh_joints[2].rotation.z = Math.PI + this.angle;
-        this.mesh_joints[3].rotation.z = this.angle;
-        this.mesh_joints[4].rotation.z = -this.angle;
+        this.mesh_joints[3].rotation.z = this.angle / 0.88;
+        this.mesh_joints[4].rotation.z = -this.angle / 0.88;
+        this.mesh_origin.rotation.y=Math.PI/6;
     }
 
     _time_idx = 0;
@@ -158,34 +159,42 @@ export class HumanWalkingPattern extends DigitalTwin {
 
         this.#mesh_body_update();               //mesh_joints[0]
         this.#mesh_right_femur_update();        //mesh_joints[1]
-        this.#mesh_left_femur_update();         //mesh_joints[2]
         this.#mesh_right_tibia_update();        //mesh_joints[3]
+        this.#mesh_left_femur_update();         //mesh_joints[2]
         this.#mesh_left_tibia_update();         //mesh_joints[4]
 
+        // document.getElementById("p1").innerHTML ="R_F Model pitch=";
     }
+
     #mesh_origin_point_update() {
         // this.mesh_origin.rotation.y = Math.sin(this.time_idx / 10) / 5;
     }
+
     #mesh_body_update() {
         // this.mesh_joints[0].rotation.y = Math.sin(this.time_idx/10);
     }
 
     #mesh_right_femur_update() {
-        // this.mesh_joints[1].rotation.y = this.IMU_data[R_F];
+        let idx = 1, name = "R_F";
+        this.mesh_joints[idx].rotation.x = this.IMU_data_R_F[this.time_idx]; //p
+
     }
 
     #mesh_left_femur_update() {
-        this.mesh_joints[2].rotation.y = this.IMU_data["L_F"][this.time_idx]["p"];
+        let idx = 2, name = "L_F";
+        this.mesh_joints[idx].rotation.x = this.IMU_data_L_F[this.time_idx]; //p
     }
 
     #mesh_right_tibia_update() {
-        // this.mesh_joints[3].rotation.y = Math.sin(this.time_idx/10);
+        let idx = 3, name = "R_T";
+        this.mesh_joints[idx].rotation.x = this.IMU_data_R_T[this.time_idx]; //p
+
 
     }
 
     #mesh_left_tibia_update() {
-        // this.mesh_joints[4].rotation.y = Math.sin(this.time_idx/10);
-
+        let idx = 4, name = "L_T";
+        this.mesh_joints[idx].rotation.x = this.IMU_data_L_T[this.time_idx]; //p
     }
 
 
@@ -193,8 +202,135 @@ export class HumanWalkingPattern extends DigitalTwin {
         return this._time_idx;
     }
 
+    _interpolation_num = 2;
+    IMU_data_R_F = [];
+    IMU_data_L_F = [];
+    IMU_data_R_T = [];
+    IMU_data_L_T = [];
+
+    get interpolation_num() {
+        return this._interpolation_num;
+    }
+
+//compensate for latency
     IMU_data_update(new_data) {
-        this.IMU_data = new_data;
+        let idx, k, name;
+        let current, target, diff;
+        const threshold=0.02;
+        //compensate for "R_F", "P"
+        idx = 1;
+        name = "R_F";
+
+        //calculate the target
+        current = this.mesh_joints[idx].rotation.x;
+        if (Math.abs(new_data[name][0]["r"] - 180) < Math.abs(new_data[name][0]["r"] - 0)
+            || Math.abs(new_data[name][0]["r"] + 180) < Math.abs(new_data[name][0]["r"] - 0)) {
+            k = 1;
+        } else {
+            k = -1;
+        }
+        target = (new_data[name][0]["p"] / 180 * Math.PI + Math.PI / 2) * k; //p
+        diff = (target - current) / (this.interpolation_num + 1);
+
+        //save the interpolation
+        this.IMU_data_R_F.splice(0, this.IMU_data_R_F.length);
+        if (Math.abs(diff) > threshold) {
+            for (let i = 1; i <= this.interpolation_num; i++) {
+                let tmp = current + i * diff;
+                this.IMU_data_R_F.push(tmp);
+            }
+            this.IMU_data_R_F.push(target);
+        } else {
+            for (let i = 0; i <= this.interpolation_num; i++) {
+                this.IMU_data_R_F.push(current);
+            }
+        }
+
+
+        //compensate for "L_F", "P"
+        idx = 2;
+        name = "L_F";
+
+        //calculate the target
+        current = this.mesh_joints[idx].rotation.x;
+        if (Math.abs(new_data[name][0]["r"] - 180) < Math.abs(new_data[name][0]["r"] - 0)
+            || Math.abs(new_data[name][0]["r"] + 180) < Math.abs(new_data[name][0]["r"] - 0)) {
+            k = 1;
+        } else {
+            k = -1;
+        }
+        target = (new_data[name][0]["p"] / 180 * Math.PI + Math.PI / 2) * k; //p
+        diff = (target - current) / (this.interpolation_num + 1);
+
+        //save the interpolation
+        this.IMU_data_L_F.splice(0, this.IMU_data_L_F.length);
+        if (Math.abs(diff) > threshold) {
+            for (let i = 1; i <= this.interpolation_num; i++) {
+                let tmp = current + i * diff;
+                this.IMU_data_L_F.push(tmp);
+            }
+            this.IMU_data_L_F.push(target);
+        } else {
+            for (let i = 0; i <= this.interpolation_num; i++) {
+                this.IMU_data_L_F.push(current);
+            }
+        }
+
+
+
+        idx = 3;
+        name = "R_T";
+        current = this.mesh_joints[idx].rotation.x;
+        if (Math.abs(new_data[name][0]["r"] - 180) < Math.abs(new_data[name][0]["r"] - 0)
+            || Math.abs(new_data[name][0]["r"] + 180) < Math.abs(new_data[name][0]["r"] - 0)) {
+            k = 1;
+        } else {
+            k = -1;
+        }
+        //this.mesh_joints[1] is right_femur
+        target = this.mesh_joints[1].rotation.x
+            - (new_data[name][0]["p"] / 180 * Math.PI + Math.PI / 2) * k;
+        diff = (target - current) / (this.interpolation_num + 1);
+
+        this.IMU_data_R_T.splice(0, this.IMU_data_R_T.length);
+        if (Math.abs(diff) > threshold) {
+            for (let i = 1; i <= this.interpolation_num; i++) {
+                let tmp = current + i * diff;
+                this.IMU_data_R_T.push(tmp);
+            }
+            this.IMU_data_R_T.push(target);
+        } else {
+            for (let i = 0; i <= this.interpolation_num; i++) {
+                this.IMU_data_R_T.push(current);
+            }
+        }
+
+        idx = 4;
+        name = "L_T";
+        current = this.mesh_joints[idx].rotation.x;
+        if (Math.abs(new_data[name][0]["r"] - 180) < Math.abs(new_data[name][0]["r"] - 0)
+            || Math.abs(new_data[name][0]["r"] + 180) < Math.abs(new_data[name][0]["r"] - 0)) {
+            k = 1;
+        } else {
+            k = -1;
+        }
+        target = this.mesh_joints[2].rotation.x
+            - (new_data[name][0]["p"] / 180 * Math.PI + Math.PI / 2) * k;
+        diff = (target - current) / (this.interpolation_num + 1);
+
+        this.IMU_data_L_T.splice(0, this.IMU_data_L_T.length);
+        if (Math.abs(diff) > threshold) {
+            for (let i = 1; i <= this.interpolation_num; i++) {
+                let tmp = current + i * diff;
+                this.IMU_data_L_T.push(tmp);
+            }
+            this.IMU_data_L_T.push(target);
+        } else {
+            for (let i = 0; i <= this.interpolation_num; i++) {
+                this.IMU_data_L_T.push(current);
+            }
+        }
+
     }
 
 }
